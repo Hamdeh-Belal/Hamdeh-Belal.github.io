@@ -98,6 +98,35 @@
       .cards{grid-template-columns:1fr}
       nav a{margin-left:12px}
     }
+    /* Extra Mobile Optimizations */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .title {
+        font-size: 32px;
+      }
+      .social {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .profile {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        display: none; /* Could be replaced with a hamburger menu */
+      }
+      .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
+
     
   </style>
 </head>
