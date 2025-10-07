@@ -1,348 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Belal Hamdeh – Software Engineer</title>
-  <meta name="description" content="Portfolio of Belal Hamdeh – Software Engineer (Java, C#, ASP.NET, React, SQL, Cosmos DB). Dark, moody, owl-themed site." />
-  <meta property="og:title" content="Belal Hamdeh – Software Engineer" />
-  <meta property="og:description" content="Full‑stack developer focused on secure, scalable software. Projects: PALLAM, HopeLearnBridge, P2P Chat, Data Structures in Java." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0b0f" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0b0f; /* near-black */
-      --panel:#111319; /* deep slate */
-      --soft:#0f1117; /* stage backdrop */
-      --text:#e7e7ea; /* light text */
-      --muted:#a6a6b0; /* muted text */
-      --accent:#f59e0b; /* amber/gold */
-      --accent-2:#eab308; /* brighter gold */
-      --glow: 0 0 30px rgba(245,158,11,.15);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,rgba(245,158,11,.06),transparent),
-      radial-gradient(900px 500px at 80% -20%,rgba(234,179,8,.05),transparent), var(--bg);
-      color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;}
-    a{color:var(--text); text-decoration:none}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:1100px;margin:0 auto;padding:32px 20px}
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(6px); background:linear-gradient(180deg,rgba(11,11,15,.9),rgba(11,11,15,.55)); border-bottom:1px solid rgba(255,255,255,.05); z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand h1{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;margin:0;font-size:22px}
-    .muted{color:var(--muted)}
-    .chip{border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:999px; color:var(--muted); font-size:12px}
-    nav a{margin-left:18px; font-weight:600; font-size:14px}
-    .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.14); padding:10px 14px; border-radius:12px; background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.0)); box-shadow:var(--glow)}
-    .btn:hover{border-color:rgba(245,158,11,.6); box-shadow:0 0 0 4px rgba(245,158,11,.08), 0 0 36px rgba(245,158,11,.2)}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Belal Hamdeh – Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Belal Hamdeh – Software Engineer (Java, C#, ASP.NET, React, SQL, Cosmos DB). Dark, moody, owl-themed site."
+    />
+    <meta property="og:title" content="Belal Hamdeh – Software Engineer" />
+    <meta
+      property="og:description"
+      content="Full‑stack developer focused on secure, scalable software. Projects: PALLAM, HopeLearnBridge, P2P Chat, Data Structures in Java."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b0b0f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0b0f; /* near-black */
+        --panel: #111319; /* deep slate */
+        --soft: #0f1117; /* stage backdrop */
+        --text: #e7e7ea; /* light text */
+        --muted: #a6a6b0; /* muted text */
+        --accent: #f59e0b; /* amber/gold */
+        --accent-2: #eab308; /* brighter gold */
+        --glow: 0 0 30px rgba(245, 158, 11, 0.15);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: radial-gradient(
+            1200px 600px at 20% -10%,
+            rgba(245, 158, 11, 0.06),
+            transparent
+          ),
+          radial-gradient(
+            900px 500px at 80% -20%,
+            rgba(234, 179, 8, 0.05),
+            transparent
+          ),
+          var(--bg);
+        color: var(--text);
+        font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      a {
+        color: var(--text);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--accent);
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: saturate(140%) blur(6px);
+        background: linear-gradient(
+          180deg,
+          rgba(11, 11, 15, 0.9),
+          rgba(11, 11, 15, 0.55)
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 50;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .brand h1 {
+        font-family: "Playfair Display", serif;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin: 0;
+        font-size: 22px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .chip {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      nav a {
+        margin-left: 18px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0)
+        );
+        box-shadow: var(--glow);
+      }
+      .btn:hover {
+        border-color: rgba(245, 158, 11, 0.6);
+        box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.08),
+          0 0 36px rgba(245, 158, 11, 0.2);
+      }
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1.2fr .8fr; gap:36px; align-items:center; padding:64px 0}
-    .kicker{font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--muted)}
-    .title{font-family:"Playfair Display",serif; font-weight:800; font-size:54px; line-height:1.02; margin:8px 0 12px}
-    .lead{color:#d8d8de; font-size:18px}
-    .social{display:flex; gap:14px; margin-top:22px}
-    .social a{border:1px solid rgba(255,255,255,.1); padding:10px; border-radius:12px}
-    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:22px; display:grid; place-items:center; position:relative; overflow:hidden}
-    .owl{width:120px; height:120px}
-    .owl .eye{transform-origin:center; animation:blink 8s infinite}
-    @keyframes blink{0%, 97%,100%{transform:scaleY(1)}98%,99%{transform:scaleY(.05)}}
-    .profile{width:160px;height:160px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)); box-shadow:var(--glow); object-fit:cover}
-    .note{font-size:12px;color:var(--muted); margin-top:10px}
-
-    /* Sections */
-    section{padding:36px 0}
-    h2.section-title{font-family:"Playfair Display",serif;font-size:32px; margin:0 0 18px}
-
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:18px}
-    .card h3{margin:0 0 10px; font-size:16px}
-    .tags{display:flex; flex-wrap:wrap; gap:8px}
-    .tag{font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.1); padding:4px 8px; border-radius:999px}
-
-    /* Projects */
-    table{width:100%; border-collapse:separate; border-spacing:0}
-    thead{color:var(--muted); font-size:14px}
-    th,td{text-align:left; padding:14px 14px}
-    tbody tr{border-top:1px solid rgba(255,255,255,.06)}
-    tbody tr:hover{background:rgba(245,158,11,.03)}
-    td a{font-weight:700}
-    td a:hover{color:var(--accent-2)}
-    .p-desc{color:#d5d5db}
-
-    /* Timeline */
-    .timeline{position:relative; padding-left:24px}
-    .timeline:before{content:""; position:absolute; left:9px; top:4px; bottom:4px; width:2px; background:linear-gradient(var(--accent),transparent)}
-    .t-item{position:relative; margin:0 0 18px 0; padding-left:12px}
-    .t-item:before{content:""; position:absolute; left:-4px; top:8px; width:10px; height:10px; border-radius:50%; background:var(--accent)}
-    .t-item h3{margin:0 0 6px 0; font-size:16px}
-    .t-item .when{font-size:16px; color:var(--muted)}
-
-    footer{padding:28px 0 60px; color:var(--muted); text-align:center}
-
-    /* Reveal on scroll */
-    .reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease}
-    .reveal.on{opacity:1; transform:translateY(0)}
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr;}
-      .cards{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 620px){
-      .title{font-size:40px}
-      .cards{grid-template-columns:1fr}
-      nav a{margin-left:12px}
-    }
-    /* Extra Mobile Optimizations */
-    @media (max-width: 768px) {
+      /* Hero */
       .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 36px;
+        align-items: center;
+        padding: 64px 0;
+      }
+      .kicker {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
       }
       .title {
-        font-size: 32px;
+        font-family: "Playfair Display", serif;
+        font-weight: 800;
+        font-size: 54px;
+        line-height: 1.02;
+        margin: 8px 0 12px;
+      }
+      .lead {
+        color: #d8d8de;
+        font-size: 18px;
       }
       .social {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        gap: 14px;
+        margin-top: 22px;
       }
-      .profile {
+      .social a {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 12px;
+      }
+      .hero-card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.01)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 22px;
+        display: grid;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .owl {
         width: 120px;
         height: 120px;
       }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        display: none; /* Could be replaced with a hamburger menu */
+      .owl .eye {
+        transform-origin: center;
+        animation: blink 8s infinite;
       }
-      .btn {
-        padding: 8px 12px;
+      @keyframes blink {
+        0%,
+        97%,
+        100% {
+          transform: scaleY(1);
+        }
+        98%,
+        99% {
+          transform: scaleY(0.05);
+        }
+      }
+      .profile {
+        width: 160px;
+        height: 160px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.01)
+        );
+        box-shadow: var(--glow);
+        object-fit: cover;
+      }
+      .note {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 10px;
+      }
+
+      /* Sections */
+      section {
+        padding: 36px 0;
+      }
+      h2.section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        margin: 0 0 18px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.01)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tag {
+        font-size: 12px;
+        color: var(--muted);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 4px 8px;
+        border-radius: 999px;
+      }
+
+      /* Projects */
+      table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      thead {
+        color: var(--muted);
         font-size: 14px;
       }
-    }
+      th,
+      td {
+        text-align: left;
+        padding: 14px 14px;
+      }
+      tbody tr {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      tbody tr:hover {
+        background: rgba(245, 158, 11, 0.03);
+      }
+      td a {
+        font-weight: 700;
+      }
+      td a:hover {
+        color: var(--accent-2);
+      }
+      .p-desc {
+        color: #d5d5db;
+      }
 
-    
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-    
-        <h1>Belal Hamdeh</h1>
-        <span class="chip">Software Engineer</span>
-      </div>
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding-left: 24px;
+      }
+      .timeline:before {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 4px;
+        bottom: 4px;
+        width: 2px;
+        background: linear-gradient(var(--accent), transparent);
+      }
+      .t-item {
+        position: relative;
+        margin: 0 0 18px 0;
+        padding-left: 12px;
+      }
+      .t-item:before {
+        content: "";
+        position: absolute;
+        left: -4px;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .t-item h3 {
+        margin: 0 0 6px 0;
+        font-size: 16px;
+      }
+      .t-item .when {
+        font-size: 16px;
+        color: var(--muted);
+      }
 
-  <main class="wrap">
-    <!-- Hero / About -->
-    <section id="about" class="hero">
-      <div>
-        
-        <h2 class="title">Software Engineer crafting secure, scalable systems.</h2>
-        <p class="lead">Detail‑oriented full‑stack developer with strength in Java, C#, ASP.NET, React, and databases (SQL & Cosmos DB). I like building reliable software, testing it well, and keeping things secure — without the drama.</p>
-        <div class="social">
-          <a class="btn" href="mailto:be.hamdeh3@gmail.com" aria-label="Email">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor"/><path d="m4 7 8 6 8-6" stroke="currentColor"/></svg>
-            <span>be.hamdeh3@gmail.com</span>
-          </a>
-          <a class="btn" href="https://www.linkedin.com/in/belal-hamdeh/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9v10M6 5v.01M10 19v-6a3 3 0 0 1 6 0v6" stroke="currentColor"/></svg>
-            <span>LinkedIn</span>
-          </a>
-          <a class="btn" href="https://github.com/Hamdeh-Belal" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.2 2 16.8 4.9 20.7 9 22c.3 0 .5-.2.5-.4v-2c-2 .5-2.4-1-2.4-1-.3-.8-.7-1-1.1-1-.9-.6.1-.6.1-.6 1 .1 1.5 1.1 1.5 1.1.9 1.6 2.5 1.1 3.1.8.1-.7.4-1.1.7-1.4-2-.2-4.1-1-4.1-4.6 0-1 .3-1.8 1-2.6-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.4-.3.8 0 1.6.1 2.4.3 1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.8 1 1.6 1 2.6 0 3.6-2.1 4.4-4.1 4.6.4.3.8.9.8 1.9v2.8c0 .2.2.4.5.4 4.1-1.3 7-5.2 7-9.8C22 6.6 17.5 2 12 2Z" stroke="currentColor"/></svg>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <!-- Replace src with your real photo (e.g., assets/belal.jpg). Keep the alt text. -->
-        <img class="profile" src="Belal PIC.png" alt="Belal Hamdeh profile portrait placeholder" />
-        <div class="note">A sword is not strength — the mind <strong>is</strong>.</div>
-        <div style="position:absolute; inset:auto -30px -30px auto; filter:blur(60px); opacity:.35; pointer-events:none;"> 
-          <svg width="180" height="180" viewBox="0 0 64 64" fill="none">
-            <circle cx="22" cy="26" r="6" fill="#f59e0b" class="eye"/>
-            <circle cx="42" cy="26" r="6" fill="#f59e0b" class="eye"/>
-          </svg>
-        </div>
-      </div>
-    </section>
+      footer {
+        padding: 28px 0 60px;
+        color: var(--muted);
+        text-align: center;
+      }
 
-    <!-- Skills -->
-    <section id="skills" class="reveal">
-      <h2 class="section-title">Skills</h2>
-      <div class="cards">
-        <div class="card"><h3>Languages</h3>
-          <div class="tags">
-            <span class="tag">Java (Advanced)</span>
-            <span class="tag">C# (Intermediate)</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Swift (Beginner)</span>
-          </div>
-        </div>
-        <div class="card"><h3>Frameworks & Tools</h3>
-          <div class="tags">
-            <span class="tag">ASP.NET</span>
-            <span class="tag">React</span>
-            <span class="tag">Selenium IDE</span>
-            <span class="tag">JMeter</span>
-            <span class="tag">Android</span>
-            <span class="tag">Azure DevOps</span>
-          </div>
-        </div>
-        <div class="card"><h3>Databases</h3>
-          <div class="tags">
-            <span class="tag">SQL</span>
-            <span class="tag">Cosmos DB</span>
-          </div>
-        </div>
-        <div class="card"><h3>Ops & Version Control</h3>
-          <div class="tags">
-            <span class="tag">Linux (CLI)</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-          </div>
-        </div>
-        <div class="card"><h3>Testing</h3>
-          <div class="tags">
-            <span class="tag">Test Design</span>
-            <span class="tag">Selenium Automation</span>
-            <span class="tag">Performance (JMeter)</span>
-            <span class="tag">Agile/DevOps</span>
-          </div>
-        </div>
-        <div class="card"><h3>Other Expertise</h3>
-          <div class="tags">
-            <span class="tag">Software Modeling</span>
-            <span class="tag">Cryptographic Protocols</span>
-            <span class="tag">Agile Methodologies</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      /* Reveal on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .reveal.on {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-    <!-- Projects -->
-    <section id="projects" class="reveal">
-      <h2 class="section-title">🚀 Featured Projects</h2>
-      <div style="overflow:auto; border:1px solid rgba(255,255,255,.06); border-radius:14px;">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:28%">Project</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="https://github.com/Hamdeh-Belal/PALLAM" target="_blank" rel="noopener">PALLAM</a></td>
-              <td class="p-desc">A mobile chatbot that provides accurate and unbiased information about Palestine’s geography and history. Powered by a fine‑tuned LLM trained on 20,564+ Arabic Q&A pairs.</td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/Hamdeh-Belal/HopeLearnBridge" target="_blank" rel="noopener">ASAL‑Internship‑App (HopeLearnBridge)</a></td>
-              <td class="p-desc">Full‑stack web app developed during Summer 2024 at ASAL Technologies. Bridges learners with educational resources and community knowledge sharing.</td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/Hamdeh-Belal/P2P-Chat-app" target="_blank" rel="noopener">P2P‑Chat‑app</a></td>
-              <td class="p-desc">Distributed peer‑to‑peer chat with an HDFS‑backed directory service.</td>
-            </tr>
-            <tr>
-              <td><a href="https://github.com/Hamdeh-Belal/Data_Structure" target="_blank" rel="noopener">Data‑Structures‑Java</a></td>
-              <td class="p-desc">Practical Java implementations of core data structures and algorithms.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .cards {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 620px) {
+        .title {
+          font-size: 40px;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+        nav a {
+          margin-left: 12px;
+        }
+      }
+      /* Extra Mobile Optimizations */
+      @media (max-width: 768px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .title {
+          font-size: 32px;
+        }
+        .social {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .profile {
+          width: 120px;
+          height: 120px;
+        }
+      }
 
-    <!-- Experience -->
-    <section id="experience" class="reveal">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <div class="t-item">
-          <h3>Backend Web Intern – ASAL Technologies</h3>
-          <div class="when">Aug 2024 – Oct 6, 2024 • Ramallah</div>
-          <p class="p-desc">Worked on a project using <strong>React</strong> (front end), <strong>ASP.NET</strong> (back end), <strong>Cosmos DB</strong> (database), and <strong>Azure DevOps</strong> for workflows and collaboration.</p>
-          <p class="muted"><a href="https://www.asaltech.com/" target="_blank" rel="noopener">asaltech.com</a></p>
+      @media (max-width: 480px) {
+        nav {
+          display: none; /* Could be replaced with a hamburger menu */
+        }
+        .btn {
+          padding: 8px 12px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <div class="brand">
+          <h1>Belal Hamdeh</h1>
+          <span class="chip">Software Engineer</span>
         </div>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Education -->
-    <section id="education" class="reveal">
-      <h2 class="section-title">Education</h2>
-      <div class="timeline">
-        <div class="t-item">
-          <h3>B.Sc. Computer Science – Birzeit University</h3>
-          <div class="when">2021 – 2025 • Cumulative Average: Very Good</div>
-          <p class="p-desc">Graduation project: <em>Chatbot for Palestine’s Geography</em> – mobile app integrating a fine‑tuned LLM (Mistral) via API using Flutter and Hugging Face; included LoRA & instruction fine‑tuning on a domain dataset of 20k+ Q&A pairs.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="reveal">
-      <h2 class="section-title">Certifications</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Freelancer Development Course</h3>
-          <p class="muted">British Council • Communication for freelancing (client interaction & intercultural skills).</p>
-        </div>
-        <div class="card">
-          <h3>Elements of AI for Business</h3>
-          <p class="muted">MinnaLearn & University of Helsinki • AI fundamentals, applications, and strategy alignment.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="reveal">
-      <h2 class="section-title">Contact</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Let’s build something solid.</h3>
-          <p class="muted">Email is best. I’m open to backend, full‑stack, and QA/automation roles.</p>
-          <p>
-            <a class="btn" href="mailto:be.hamdeh3@gmail.com">Email</a>
-            <a class="btn" href="https://github.com/Hamdeh-Belal" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/belal-hamdeh/" target="_blank" rel="noopener">LinkedIn</a>
+    <main class="wrap">
+      <!-- Hero / About -->
+      <section id="about" class="hero">
+        <div>
+          <h2 class="title">
+            Software Engineer crafting secure, scalable systems.
+          </h2>
+          <!-- <p class="lead">Detail‑oriented full‑stack developer with strength in Java, C#, ASP.NET, React, and databases (SQL & Cosmos DB). I like building reliable software, testing it well, and keeping things secure — without the drama.</p> -->
+          <p class="lead">
+            Software Engineer and QA professional with expertise in software
+            development, object-oriented programming (OOP), and quality
+            assurance (manual and automation). Passionate about building
+            scalable, high-impact products, and recognized for adaptability,
+            strong communication, and a collaborative problem-solving mindset. I
+            enjoy working with a team.
           </p>
+
+          <div class="social">
+            <a
+              class="btn"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=be.hamdeh3@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M4 6h16v12H4z" stroke="currentColor" />
+                <path d="m4 7 8 6 8-6" stroke="currentColor" />
+              </svg>
+              <span>be.hamdeh3@gmail.com</span>
+            </a>
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/belal-hamdeh/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 9v10M6 5v.01M10 19v-6a3 3 0 0 1 6 0v6"
+                  stroke="currentColor"
+                />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              class="btn"
+              href="https://github.com/Hamdeh-Belal"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2C6.5 2 2 6.6 2 12.2 2 16.8 4.9 20.7 9 22c.3 0 .5-.2.5-.4v-2c-2 .5-2.4-1-2.4-1-.3-.8-.7-1-1.1-1-.9-.6.1-.6.1-.6 1 .1 1.5 1.1 1.5 1.1.9 1.6 2.5 1.1 3.1.8.1-.7.4-1.1.7-1.4-2-.2-4.1-1-4.1-4.6 0-1 .3-1.8 1-2.6-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.4-.3.8 0 1.6.1 2.4.3 1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.8 1 1.6 1 2.6 0 3.6-2.1 4.4-4.1 4.6.4.3.8.9.8 1.9v2.8c0 .2.2.4.5.4 4.1-1.3 7-5.2 7-9.8C22 6.6 17.5 2 12 2Z"
+                  stroke="currentColor"
+                />
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
+        <div class="hero-card">
+          <!-- Replace src with your real photo (e.g., assets/belal.jpg). Keep the alt text. -->
+          <img
+            class="profile"
+            src="Belal PIC.png"
+            alt="Belal Hamdeh profile portrait placeholder"
+          />
+          <div class="note">
+            A sword is not strength — the mind <strong>is</strong>.
+          </div>
+          <div
+            style="
+              position: absolute;
+              inset: auto -30px -30px auto;
+              filter: blur(60px);
+              opacity: 0.35;
+              pointer-events: none;
+            "
+          >
+            <svg width="180" height="180" viewBox="0 0 64 64" fill="none">
+              <circle cx="22" cy="26" r="6" fill="#f59e0b" class="eye" />
+              <circle cx="42" cy="26" r="6" fill="#f59e0b" class="eye" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="reveal">
+        <h2 class="section-title">Skills</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span class="tag">Java (Advanced)</span>
+              <span class="tag">C#</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Frameworks & Tools</h3>
+            <div class="tags">
+              <span class="tag">ASP.NET</span>
+              <span class="tag">JIRA</span>
+              <span class="tag">React</span>
+              <span class="tag">Cypress</span>
+              <span class="tag">JMeter</span>
+              <span class="tag">Android</span>
+              <span class="tag">Azure DevOps</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Databases</h3>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Cosmos DB</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Ops & Version Control</h3>
+            <div class="tags">
+              <span class="tag">Linux (CLI)</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Testing</h3>
+            <div class="tags">
+              <span class="tag">Test Design</span>
+              <span class="tag">Manual Testing</span>
+              <span class="tag">Cypress Automation</span>
+              <span class="tag">API Testing</span>
+              <span class="tag">Agile</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Spoken Languages</h3>
+            <div class="tags">
+              <span class="tag">Arabic - Fluent</span>
+              <span class="tag">English - Proficient</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Other Expertise</h3>
+            <div class="tags">
+              <span class="tag">Software Modeling</span>
+              <span class="tag">Cryptographic Protocols</span>
+              <span class="tag">Agile Methodologies</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="reveal">
+        <h2 class="section-title">🚀 Featured Projects</h2>
+        <div
+          style="
+            overflow: auto;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+          "
+        >
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 28%">Project</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a
+                    href="https://github.com/Hamdeh-Belal/PALLAM"
+                    target="_blank"
+                    rel="noopener"
+                    >PALLAM</a
+                  >
+                </td>
+                <td class="p-desc">
+                  A mobile chatbot that provides accurate and unbiased
+                  information about Palestine’s geography and history. Powered
+                  by a fine‑tuned LLM trained on 20,564+ Arabic Q&A pairs.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://github.com/Hamdeh-Belal/HopeLearnBridge"
+                    target="_blank"
+                    rel="noopener"
+                    >ASAL‑Internship‑App (HopeLearnBridge)</a
+                  >
+                </td>
+                <td class="p-desc">
+                  Full‑stack web app developed during Summer 2024 at ASAL
+                  Technologies. Bridges learners with educational resources and
+                  community knowledge sharing.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://github.com/Hamdeh-Belal/P2P-Chat-app"
+                    target="_blank"
+                    rel="noopener"
+                    >P2P‑Chat‑app</a
+                  >
+                </td>
+                <td class="p-desc">
+                  Distributed peer‑to‑peer chat with an HDFS‑backed directory
+                  service.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://github.com/Hamdeh-Belal/Data_Structure"
+                    target="_blank"
+                    rel="noopener"
+                    >Data‑Structures‑Java</a
+                  >
+                </td>
+                <td class="p-desc">
+                  Practical Java implementations of core data structures and
+                  algorithms.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="reveal">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <h3>Backend Web Intern – ASAL Technologies</h3>
+            <div class="when">Aug 2024 – Oct 6, 2024 • Ramallah</div>
+            <p class="p-desc">
+              Worked on a project using <strong>React</strong> (front end),
+              <strong>ASP.NET</strong> (back end),
+              <strong>Cosmos DB</strong> (database), and
+              <strong>Azure DevOps</strong> for workflows and collaboration.
+            </p>
+            <p class="muted">
+              <a href="https://www.asaltech.com/" target="_blank" rel="noopener"
+                >asaltech.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="reveal">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <h3>B.Sc. Computer Science – Birzeit University</h3>
+            <div class="when">2021 – 2025 • Cumulative Average: Very Good</div>
+            <p class="p-desc">
+              Graduation project: <em>Chatbot for Palestine’s Geography</em> –
+              mobile app integrating a fine‑tuned LLM (Mistral) via API using
+              Flutter and Hugging Face; included LoRA & instruction fine‑tuning
+              on a domain dataset of 20k+ Q&A pairs.
+            </p>
+          </div>
+          <div class="t-item">
+            <h3>Advanced QA Training (Manual & Automation)</h3>
+            <div class="when">2025</div>
+            <p class="p-desc">
+              Led by <em>Ahmad Baker</em> • Manual, API, and automation testing
+              that developed strong manual testing skills (test case design, bug
+              reporting, JIRA Agile workflows) and gained exposure to automation
+              (Cypress) and CI/CD practices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="reveal">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Freelancer Development Course</h3>
+            <p class="muted">
+              British Council • Communication for freelancing (client
+              interaction & intercultural skills).
+            </p>
+          </div>
+          <div class="card">
+            <h3>Elements of AI for Business</h3>
+            <p class="muted">
+              MinnaLearn & University of Helsinki • AI fundamentals,
+              applications, and strategy alignment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="reveal">
+        <h2 class="section-title">Contact</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Let’s build something solid.</h3>
+            <p class="muted">
+              Email is best. I’m open to backend, full‑stack, and QA/automation
+              roles.
+            </p>
+            <p>
+              <a
+                class="btn"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=be.hamdeh3@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path d="M4 6h16v12H4z" stroke="currentColor" />
+                  <path d="m4 7 8 6 8-6" stroke="currentColor" />
+                </svg>
+                <span>Email</span>
+              </a>
+              <a
+                class="btn"
+                href="https://github.com/Hamdeh-Belal"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/belal-hamdeh/"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span id="year"></span> Belal Hamdeh</div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer>
-    <div class="wrap">
-      <div>© <span id="year"></span> Belal Hamdeh</div>
-    </div>
-  </footer>
+    <script>
+      // Current year
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-  <script>
-    // Current year
-    document.getElementById('year').textContent = new Date().getFullYear()
-
-    // Reveal on scroll (Intersection Observer)
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target) } })
-    },{threshold:0.12})
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
-  </script>
-</body>
+      // Reveal on scroll (Intersection Observer)
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("on");
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+    </script>
+  </body>
 </html>
